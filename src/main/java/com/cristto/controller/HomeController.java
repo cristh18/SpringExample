@@ -17,9 +17,9 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value = "/addAppUser")
-    public String addAppUser() {
-        appUserService.insertAppUser(new AppUser(1, "user", "pass"));
+    @RequestMapping(value = "/addUser")
+    public String addUser() {
+        appUserService.insertAppUser(new AppUser("Ines", "87654321"));
         return "home";
     }
 }

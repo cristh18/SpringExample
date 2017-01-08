@@ -16,7 +16,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 public class DatabaseConfig {
-    @Autowired
+    @Autowired //Use for dependency injection
     private ApplicationContext appContext;
 
 
@@ -57,7 +57,6 @@ public class DatabaseConfig {
 
         Properties properties = new Properties();
         properties.put("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
-        //properties.put("hibernate.current_session_context_class","thread");
         properties.put("hibernate.hbm2ddl.auto","update");
         properties.put("hibernate.show_sql","true");
 
